@@ -1,0 +1,52 @@
+# quiz_app.py
+
+# List of questions
+questions = [
+    {
+        "question": "What is the capital of India?",
+        "options": ["A. Mumbai", "B. Delhi", "C. Kolkata", "D. Chennai"],
+        "answer": "B"
+    },
+    {
+        "question": "Which language is used for web apps?",
+        "options": ["A. Python", "B. Java", "C. JavaScript", "D. All of the above"],
+        "answer": "D"
+    },
+    {
+        "question": "What does CPU stand for?",
+        "options": ["A. Central Process Unit", "B. Computer Personal Unit", "C. Central Processing Unit", "D. Control Processing Unit"],
+        "answer": "C"
+    },
+    {
+        "question": "Which one is a Python data type?",
+        "options": ["A. int", "B. float", "C. list", "D. All of the above"],
+        "answer": "D"
+    },
+    {
+        "question": "Who invented Python?",
+        "options": ["A. Dennis Ritchie", "B. Bjarne Stroustrup", "C. Guido van Rossum", "D. James Gosling"],
+        "answer": "C"
+    }
+]
+
+score = 0
+
+print("\n🧠 Welcome to the Python Quiz!")
+print("\n")
+
+# Loop through questions
+for i, q in enumerate(questions):
+    print(f"Q{i+1}: {q['question']}")
+    for option in q['options']:
+        print(option)
+    answer = input("Your answer (A/B/C/D): ").strip().upper()
+
+    if answer == q['answer']:
+        print("✅ Correct!\n")
+        score += 1
+    else:
+        print(f"❌ Wrong! The correct answer was {q['answer']}\n")
+
+print("-----------------------------------")
+print(f"🎉 You scored {score} out of {len(questions)}")
+print("-----------------------------------")
