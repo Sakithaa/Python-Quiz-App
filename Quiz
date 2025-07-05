@@ -31,7 +31,7 @@ questions = [
 
 score = 0
 
-print("\n🧠 Welcome to the Python Quiz!")
+print("\n Welcome to the Python Quiz!")
 print("\n")
 
 # Loop through questions
@@ -42,10 +42,10 @@ for i, q in enumerate(questions):
     answer = input("Your answer (A/B/C/D): ").strip().upper()
 
     if answer == q['answer']:
-        print("✅ Correct!\n")
+        print(" Correct!\n")
         score += 1
     else:
-        print(f"❌ Wrong! The correct answer was {q['answer']}\n")
+        print(f" Wrong! The correct answer was {q['answer']}\n")
 
 print("-----------------------------------")
 print(f"🎉 You scored {score} out of {len(questions)}")
